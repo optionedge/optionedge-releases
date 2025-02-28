@@ -1,0 +1,54 @@
+services:
+  engine_prod:
+    image: 'optionedge/engine:latest'
+    container_name: engine_prod
+    restart: always
+    ports:
+     - "8080:8080"
+    environment:
+     - TZ:Asia/Kolkata
+     - Auth:Domain=https://auth.optionedge.in/oidc
+     - Auth:Audience=https://api.optionedge.in
+     - RuntimeSettings__MessageQueueConnectionString=host=rabbitmq_prod:5672;virtualhost=/;username=guest;password=guest;persistentMessages=false
+     - RuntimeSettings__ConfigDatabaseConnectionString=optionedge_config.db
+     - RuntimeSettings__DataFolder=/app/data
+     - RuntimeSettings__LogFile=system_logs_.txt
+     - RuntimeSettings__MasterContractsFile=master_contracts_{{timestamp}}.json
+     - RuntimeSettings__TickDatabaseConnectionString=Server=localhost;Username=postgres;Database=optionedge_client;Port=5432;Password=postgres;SSLMode=Prefer;Include Error Detail=true
+    depends_on:
+      - rabbitmq_prod
+    volumes:
+      - ./.data:/app/data
+    user: "root:root" 
+    networks:
+        - optionedge_prod
+
+  ui_prod:
+    image: 'optionedge/engine_ui:latest'
+    container_name: ui_prod
+    restart: always
+    ports:
+     - "3000:3000"
+    environment:
+     - TZ:Asia/Kolkata
+     - NUXT_PUBLIC_API_BASE_URL=https://api.optionedge.in
+     - NUXT_PUBLIC_AUTH_ENDPOINT=https://auth.optionedge.in
+     - NUXT_PUBLIC_AUTH_APP_ID=b5qzcaxzeo0a2m7hih09m
+     - NUXT_PUBLIC_MY_OPTIONEDGE_BASE_URL=https://my.optionedge.in
+     - NUXT_PUBLIC_STREAMING_BASE_URL=https://oeserver.optionedge.in
+    depends_on:
+      - engine_prod
+    networks:
+        - optionedge_prod
+
+  rabbitmq_prod:
+    image: rabbitmq:4.0-management-alpine
+    container_name: rabbitmq_prod
+    restart: always
+    volumes:
+        - ./data/queue/data/:/var/lib/rabbitmq/
+        - ./data/queue/log/:/var/log/rabbitmq
+    networks:
+        - optionedge_prod
+networks:
+  optionedge_prod:
