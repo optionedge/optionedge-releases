@@ -1,4 +1,4 @@
-# OptionEdge
+# OptionEdge  - Change the game
 
 [![Windows Installer](https://img.shields.io/badge/Download-Windows%20Installer-blue)](https://optionedgereleasessa.blob.core.windows.net/optionedge-github-releases/OptionEdge_Installer_LATEST_VERSION.exe) 
 
