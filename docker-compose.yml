@@ -18,7 +18,7 @@ services:
     depends_on:
       - rabbitmq_prod
     volumes:
-      - ./.data:/app/data
+      - ./data:/app/data
     user: "root:root" 
     networks:
         - optionedge_prod
@@ -46,8 +46,8 @@ services:
     container_name: rabbitmq_prod
     restart: always
     volumes:
-        - ./data/queue/data/:/var/lib/rabbitmq/
-        - ./data/queue/log/:/var/log/rabbitmq
+        - ./.data/queue/data/:/var/lib/rabbitmq/
+        - ./.data/queue/log/:/var/log/rabbitmq
     networks:
         - optionedge_prod
 networks:
