@@ -1,6 +1,6 @@
 # OptionEdge
 
-**OptionEdge** is a self-hosted, web-based trading platform designed to help traders execute trades quickly, manage positions efficiently, and optimize their strategies with advanced risk management capabilities. Whether you're a beginner or an experienced trader, OptionEdge provides a powerful toolkit to forward-test ideas, visualize payoffs, and adjust strategies without risking real capital.
+**OptionEdge** is a self-hosted, web-based trading platform designed to help traders execute trades live quickly, manage positions efficiently, and optimize their strategies with advanced risk management capabilities. Whether you're a beginner or an experienced trader, OptionEdge provides a powerful toolkit to forward-test ideas, visualize payoffs, and adjust strategies without risking real capital or execute live with your favourite broker.
 
 ## 🚀 Key Features
 
