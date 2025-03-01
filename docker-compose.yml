@@ -1,6 +1,6 @@
 services:
   engine_prod:
-    image: 'optionedge/engine:latest'
+    image: 'optionedge/engine:{{EngineVersion}}'
     container_name: engine_prod
     restart: always
     ports:
@@ -24,7 +24,7 @@ services:
         - optionedge_prod
 
   ui_prod:
-    image: 'optionedge/engine_ui:latest'
+    image: 'optionedge/engine_ui:{{ClientVersion}}'
     container_name: ui_prod
     restart: always
     ports:
