@@ -6,7 +6,7 @@
 
 [![Docker Compose YAML](https://img.shields.io/badge/Download-Docker%20Compose-blue)](https://optionedgereleasessa.blob.core.windows.net/optionedge-github-releases/docker-compose.yml) 
 
-[![Installation Guide](https://img.shields.io/badge/View-Installation%20Guide-green)](https://optionedge.gitbook.io/optionedge-docs)
+[![Installation Guide](https://img.shields.io/badge/View-Installation%20Guide-%2300008B)](https://optionedge.gitbook.io/optionedge-docs)
 
 
 ## Introduction
