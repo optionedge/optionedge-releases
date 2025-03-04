@@ -57,6 +57,12 @@ OptionEdge is a **self-hosted** platform that can run on:
 2. **Run the Installer:**
 
    - Locate the downloaded `.exe` file and double-click to run the installer.
+   - If you see the "Windows protected your PC" warning, follow these steps to proceed:
+     ![image](https://github.com/user-attachments/assets/27a36ed9-036d-4443-adf4-37c4585c947d)
+      - Click **More info**.
+      - Click Run anyway.
+      - If **More info**, options not available, right-click the installer, select Properties, and check Unblock under the General tab. Click Apply, then OK, and run the installer again.
+        - ![image](https://github.com/user-attachments/assets/af3e9083-82e2-4551-9171-39ecb9f05350)
    - Follow the on-screen installation instructions.
 
 3. **Complete Installation:**
