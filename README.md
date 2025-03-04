@@ -6,8 +6,7 @@
 
 [![Docker Compose YAML](https://img.shields.io/badge/Download-Docker%20Compose-blue)](https://optionedgereleasessa.blob.core.windows.net/optionedge-github-releases/docker-compose.yml) 
 
-[![Installation Guide](https://img.shields.io/badge/View-Installation%20Guide-purple)](https://optionedge.gitbook.io/optionedge-docs)
-
+[Installation Guide](#optionedge-quick-start-guide)
 
 ## Introduction
 
@@ -109,7 +108,7 @@ OptionEdge is a **self-hosted** platform that can run on:
 
 2. **Install Docker on Mac:**
 
-   - Download and install Docker Desktop from [Docker’s official website](https://www.docker.com/products/docker-desktop/).
+   - Download and install Docker Desktop from [Docker’s official website](https://docs.docker.com/desktop/setup/install/mac-install/).
    - Follow the installation instructions for macOS.
    - Verify installation by running:
      ```bash
