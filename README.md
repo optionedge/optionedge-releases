@@ -2,7 +2,7 @@
 
 [![Latest Release](https://img.shields.io/github/v/release/optionedge/optionedge-releases?style=for-the-badge)](https://github.com/optionedge/optionedge-releases/releases)
 
-[![Windows Installer](https://img.shields.io/badge/Download-Windows%20Installer-blue)](https://optionedgereleasessa.blob.core.windows.net/optionedge-github-releases/OptionEdge_Installer_1.0.2.exe) 
+[![Windows Installer](https://img.shields.io/badge/Download-Windows%20Installer-blue)](https://optionedgereleasessa.blob.core.windows.net/optionedge-github-releases/OptionEdge_Installer_1.0.3.exe) 
 
 [![Docker Compose YAML](https://img.shields.io/badge/Download-Docker%20Compose-blue)](https://optionedgereleasessa.blob.core.windows.net/optionedge-github-releases/docker-compose.yml) 
 
