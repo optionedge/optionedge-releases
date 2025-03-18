@@ -8,6 +8,9 @@
 
 [Installation Guide](#optionedge-quick-start-guide)
 
+## Demo 
+[![Deploy to Oracle Cloud](https://img.shields.io/badge/Deploy%20to-Oracle%20Cloud-red?style=for-the-badge&logo=oracle)](https://console.cloud.oracle.com/?cloudshell=true&command=curl%20-sL%20https://raw.githubusercontent.com/YOUR_GITHUB_REPO/deploy_oracle_cloud.sh%20%7C%20bash)
+
 ## Introduction
 
 **OptionEdge** is a self-hosted, web-based trading platform designed to help traders execute trades live quickly, manage positions efficiently, and optimize their strategies with advanced risk management capabilities. Whether you're a beginner or an experienced trader, OptionEdge provides a powerful toolkit to forward-test ideas, visualize payoffs, and adjust strategies without risking real capital or execute live with your favourite broker.
