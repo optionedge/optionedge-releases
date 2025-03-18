@@ -6,7 +6,7 @@
 
 [![Docker Compose YAML](https://img.shields.io/badge/Download-Docker%20Compose-blue)](https://store-api.optionedge.in/releases/docker-compose.yml) 
 
-# [Click to view Installation Guide](#optionedge-quick-start-guide)
+# [Click to view Quick Start Guide](#optionedge-quick-start-guide)
 
 ## Introduction
 
