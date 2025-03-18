@@ -10,11 +10,18 @@
 
 ## One-Click Deploy to Cloud 
 
+## 🚀 One-Click Deploy to Railway
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?repo=https://github.com/optionedge/optionedge-release-railway)
+
+
 ## 🚀 One-Click Deploy to Google Cloud
 
+## Coming Soon
 [![Run on Google Cloud](https://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/optionedge/optionedge-releases&cloudshell_working_dir=/&cloudshell_tutorial=gcp_steps.md)
 
-[![Deploy to Oracle Cloud - Coming soon](https://img.shields.io/badge/Deploy%20to-Oracle%20Cloud-red?style=for-the-badge&logo=oracle)](https://console.cloud.oracle.com/?cloudshell=true&command=curl%20-sL%20https://raw.githubusercontent.com/optionedge/optionedge-releases/main/deploy_oracle_cloud.sh%20|%20bash)
+## Coming Soon
+[![Deploy to Oracle Cloud](https://img.shields.io/badge/Deploy%20to-Oracle%20Cloud-red?style=for-the-badge&logo=oracle)](https://console.cloud.oracle.com/?cloudshell=true&command=curl%20-sL%20https://raw.githubusercontent.com/optionedge/optionedge-releases/main/deploy_oracle_cloud.sh%20|%20bash)
 
 
 ## Introduction
