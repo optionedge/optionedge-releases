@@ -8,9 +8,9 @@
 
 [Installation Guide](#optionedge-quick-start-guide)
 
-## Demo 
-[![Run on Google Cloud](https://storage.googleapis.com/cloudshell-launcher/deploy-cloudshell.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/YOUR_GITHUB_REPO&working_dir=/&shellonly=true)
+## One-Click Deploy to Cloud 
 
+[![Run on Google Cloud](https://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/YOUR_GITHUB_REPO&working_dir=/&shellonly=true)
 
 [![Deploy to Oracle Cloud - Coming soon](https://img.shields.io/badge/Deploy%20to-Oracle%20Cloud-red?style=for-the-badge&logo=oracle)](https://console.cloud.oracle.com/?cloudshell=true&command=curl%20-sL%20https://raw.githubusercontent.com/optionedge/optionedge-releases/main/deploy_oracle_cloud.sh%20|%20bash)
 
