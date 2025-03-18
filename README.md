@@ -10,7 +10,9 @@
 
 ## One-Click Deploy to Cloud 
 
-[![Run on Google Cloud](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/?show=terminal&cloudshell_git_repo=https://github.com/optionedge/optionedge-releases&cloudshell_working_dir=/&cloudshell_print=echo%20Starting%20deployment...;chmod%20+x%20deploy_google_cloud.sh;./deploy_google_cloud.sh)
+## 🚀 One-Click Deploy to Google Cloud
+
+[![Run on Google Cloud](https://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/optionedge/optionedge-releases&cloudshell_working_dir=/&cloudshell_tutorial=gcp_steps.md)
 
 [![Deploy to Oracle Cloud - Coming soon](https://img.shields.io/badge/Deploy%20to-Oracle%20Cloud-red?style=for-the-badge&logo=oracle)](https://console.cloud.oracle.com/?cloudshell=true&command=curl%20-sL%20https://raw.githubusercontent.com/optionedge/optionedge-releases/main/deploy_oracle_cloud.sh%20|%20bash)
 
