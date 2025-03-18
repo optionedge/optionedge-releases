@@ -14,10 +14,9 @@ gcloud config set project $PROJECT_ID
 # Enable required Google Cloud services
 gcloud services enable compute.googleapis.com \
     run.googleapis.com \
-    cloudbuild.googleapis.com \
-    artifactregistry.googleapis.com --quiet
+    cloudbuild.googleapis.com --quiet  # Removed artifactregistry.googleapis.com
 
-# Set default compute zone
+# Set default compute zone to Free Tier region
 gcloud config set compute/zone us-central1-a
 
 # Deploy RabbitMQ on Compute Engine (Free Tier)
@@ -46,32 +45,38 @@ gcloud compute firewall-rules create allow-rabbitmq \
 
 # Get RabbitMQ VM external IP
 RABBITMQ_IP=$(gcloud compute instances list --filter="name=rabbitmq-vm" --format="value(EXTERNAL_IP)")
-echo "RabbitMQ IP: $RABBITMQ_IP"
+echo "🐇 RabbitMQ deployed at IP: $RABBITMQ_IP"
 
-# Deploy Backend to Cloud Run
+# Deploy Backend to Cloud Run (Using Docker Hub Image)
 echo "🚀 Deploying Backend..."
-gcloud builds submit --tag us-central1-docker.pkg.dev/$PROJECT_ID/optionedge-repo/engine:1.0.23 --quiet
 gcloud run deploy optionedge-engine \
-    --image=us-central1-docker.pkg.dev/$PROJECT_ID/optionedge-repo/engine:latest \
+    --image=docker.io/optionedge/engine:1.0.22 \  # Pull from Docker Hub
     --platform=managed \
     --region=us-central1 \
     --allow-unauthenticated \
-    --set-env-vars="TZ=Asia/Kolkata,Auth__Domain=https://auth.optionedge.in/oidc,Auth__Audience=https://api.optionedge.in,RuntimeSettings__MessageQueueConnectionString=host=$RABBITMQ_IP:5672;virtualhost=/;username=guest;password=guest;persistentMessages=false" --quiet
+    --set-env-vars="TZ=Asia/Kolkata,Auth__Domain=https://auth.optionedge.in/oidc,Auth__Audience=https://api.optionedge.in,RuntimeSettings__MessageQueueConnectionString=host=$RABBITMQ_IP:5672;virtualhost=/;username=guest;password=guest;persistentMessages=false" \
+    --max-instances=1 --quiet  # Ensures Cloud Run stays within Free Tier
 
 # Get Backend URL
 BACKEND_URL=$(gcloud run services describe optionedge-engine --region=us-central1 --format="value(status.url)")
-echo "Backend deployed at: $BACKEND_URL"
+echo "🌍 Backend deployed at: $BACKEND_URL"
 
-# Deploy Frontend to Cloud Run
+# Deploy Frontend to Cloud Run (Using Docker Hub Image)
 echo "🚀 Deploying Frontend..."
-gcloud builds submit --tag us-central1-docker.pkg.dev/$PROJECT_ID/optionedge-repo/engine-ui:1.0.23 --quiet
 gcloud run deploy optionedge-ui \
-    --image=us-central1-docker.pkg.dev/$PROJECT_ID/optionedge-repo/engine-ui:latest \
+    --image=docker.io/optionedge/engine_ui:1.0.22 \  # Pull from Docker Hub
     --platform=managed \
     --region=us-central1 \
     --allow-unauthenticated \
-    --set-env-vars="NUXT_PUBLIC_API_BASE_URL=$BACKEND_URL,NUXT_PUBLIC_AUTH_ENDPOINT=https://auth.optionedge.in,NUXT_PUBLIC_MY_OPTIONEDGE_BASE_URL=https://my.optionedge.in" --quiet
+    --set-env-vars="NUXT_PUBLIC_API_BASE_URL=$BACKEND_URL,NUXT_PUBLIC_AUTH_ENDPOINT=https://auth.optionedge.in,NUXT_PUBLIC_MY_OPTIONEDGE_BASE_URL=https://my.optionedge.in" \
+    --max-instances=1 --quiet  # Prevents extra charges
 
 # Get Frontend URL
 FRONTEND_URL=$(gcloud run services describe optionedge-ui --region=us-central1 --format="value(status.url)")
 echo "✅ Deployment Complete! Access your app at: $FRONTEND_URL"
+
+# Cleanup: Delete Artifact Registry if it exists (No longer needed)
+if gcloud artifacts repositories list --filter="name=optionedge-repo" --format="value(name)" | grep -q "optionedge-repo"; then
+    echo "🗑️ Deleting unused Artifact Registry..."
+    gcloud artifacts repositories delete optionedge-repo --location=us-central1 --quiet
+fi
