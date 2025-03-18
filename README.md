@@ -6,23 +6,7 @@
 
 [![Docker Compose YAML](https://img.shields.io/badge/Download-Docker%20Compose-blue)](https://store-api.optionedge.in/releases/docker-compose.yml) 
 
-[Installation Guide](#optionedge-quick-start-guide)
-
-## One-Click Deploy to Cloud 
-
-## 🚀 One-Click Deploy to Railway
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?repo=https://github.com/optionedge/optionedge-release-railway)
-
-
-## 🚀 One-Click Deploy to Google Cloud
-
-## Coming Soon
-[![Run on Google Cloud](https://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/optionedge/optionedge-releases&cloudshell_working_dir=/&cloudshell_tutorial=gcp_steps.md)
-
-## Coming Soon
-[![Deploy to Oracle Cloud](https://img.shields.io/badge/Deploy%20to-Oracle%20Cloud-red?style=for-the-badge&logo=oracle)](https://console.cloud.oracle.com/?cloudshell=true&command=curl%20-sL%20https://raw.githubusercontent.com/optionedge/optionedge-releases/main/deploy_oracle_cloud.sh%20|%20bash)
-
+# [Click to view Installation Guide](#optionedge-quick-start-guide)
 
 ## Introduction
 
