@@ -12,5 +12,7 @@ Click the button below to start the deployment:
 ```bash
 chmod +x deploy_google_cloud.sh && ./deploy_google_cloud.sh
 
+Click below to execute the deployment:
+
 @[chmod +x deploy_google_cloud.sh && ./deploy_google_cloud.sh](button)
 
