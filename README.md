@@ -9,7 +9,8 @@
 [Installation Guide](#optionedge-quick-start-guide)
 
 ## Demo 
-[![Deploy to Oracle Cloud](https://img.shields.io/badge/Deploy%20to-Oracle%20Cloud-red?style=for-the-badge&logo=oracle)](https://console.cloud.oracle.com/?cloudshell=true&command=curl%20-sL%20https://raw.githubusercontent.com/optionedge/optionedge-releases/refs/heads/main/deploy_oracle_cloud.sh%20%7C%20bash)
+[![Deploy to Oracle Cloud](https://img.shields.io/badge/Deploy%20to-Oracle%20Cloud-red?style=for-the-badge&logo=oracle)](https://console.cloud.oracle.com/?cloudshell=true&command=curl%20-sL%20https://raw.githubusercontent.com/optionedge/optionedge-releases/main/deploy_oracle_cloud.sh%20|%20bash)
+
 
 ## Introduction
 
