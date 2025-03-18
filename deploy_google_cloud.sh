@@ -50,7 +50,7 @@ echo "RabbitMQ IP: $RABBITMQ_IP"
 
 # Deploy Backend to Cloud Run
 echo "🚀 Deploying Backend..."
-gcloud builds submit --tag us-central1-docker.pkg.dev/$PROJECT_ID/optionedge-repo/engine:latest --quiet
+gcloud builds submit --tag us-central1-docker.pkg.dev/$PROJECT_ID/optionedge-repo/engine:1.0.23 --quiet
 gcloud run deploy optionedge-engine \
     --image=us-central1-docker.pkg.dev/$PROJECT_ID/optionedge-repo/engine:latest \
     --platform=managed \
@@ -64,7 +64,7 @@ echo "Backend deployed at: $BACKEND_URL"
 
 # Deploy Frontend to Cloud Run
 echo "🚀 Deploying Frontend..."
-gcloud builds submit --tag us-central1-docker.pkg.dev/$PROJECT_ID/optionedge-repo/engine-ui:latest --quiet
+gcloud builds submit --tag us-central1-docker.pkg.dev/$PROJECT_ID/optionedge-repo/engine-ui:1.0.23 --quiet
 gcloud run deploy optionedge-ui \
     --image=us-central1-docker.pkg.dev/$PROJECT_ID/optionedge-repo/engine-ui:latest \
     --platform=managed \
