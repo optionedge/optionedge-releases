@@ -7,7 +7,7 @@ set -e  # Exit script immediately if any command fails
 gcloud auth login --quiet
 
 # Create a new project (skip if the user already has a project)
-PROJECT_ID="optionedge-$(date +%s)"
+PROJECT_ID="optionedge-1742279787"
 gcloud projects create $PROJECT_ID --set-as-default
 gcloud config set project $PROJECT_ID
 
