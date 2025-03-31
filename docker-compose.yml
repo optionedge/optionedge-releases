@@ -12,10 +12,7 @@ services:
      - ASPNETCORE_ENVIRONMENT=Production
      - RuntimeSettings__ProfileApiBaseUrl=https://api.optionedge.in/
      - RuntimeSettings__MessageQueueConnectionString=host=rabbitmq_local:5672;virtualhost=/;username=guest;password=guest;persistentMessages=false
-     - RuntimeSettings__ConfigDatabaseConnectionString=optionedge_config.db
      - RuntimeSettings__DataFolder=/app/data
-     - RuntimeSettings__LogFile=system_logs_.txt
-     - RuntimeSettings__MasterContractsFile=master_contracts_{{timestamp}}.json
     depends_on:
       - rabbitmq_local
     volumes:
