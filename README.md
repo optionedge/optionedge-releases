@@ -68,12 +68,11 @@ OptionEdge is a **self-hosted** platform that can run on:
 3. **Complete Installation:**
 
    - Once the installation is completed, two shortcuts will be available on the desktop:
-     - **Start OptionEdge Engine** – This starts the OptionEdge engine, which must be kept running.
-     - **Start OptionEdge UI** – This launches the UI and opens the link [`http://localhost:3000`](http://localhost:3000) in the browser.
-
+     - **Start OptionEdge** – This starts the OptionEdge engine and launches the browser, which must be kept running.
+     
 4. **Accessing the UI:**
 
-   - Open Chrome (recommended) and navigate to [`http://localhost:3000`](http://localhost:3000).
+   - Open Chrome (recommended) and navigate to [`http://localhost:7500`](http://localhost:7500).
    - Log in with your credentials and follow the on-screen installation steps.
 
 ---
@@ -151,7 +150,7 @@ OptionEdge is a **self-hosted** platform that can run on:
 
 4. **Access the UI:**
 
-   - Open Chrome (recommended) and go to [`http://localhost:3000`](http://localhost:3000).
+   - Open Chrome (recommended) and go to [`http://localhost:7500`](http://localhost:7500).
    - Log in with your credentials and complete the setup.
 
 5. **Persistent Data Storage:**
