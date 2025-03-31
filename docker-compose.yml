@@ -4,7 +4,7 @@ services:
     container_name: engine_local
     restart: always
     ports:
-     - "7500:7500"
+     - "7500:8080"
     environment:
      - TZ=Asia/Kolkata
      - Auth:Domain=https://auth.optionedge.in/oidc
