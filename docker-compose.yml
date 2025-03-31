@@ -9,6 +9,7 @@ services:
      - TZ=Asia/Kolkata
      - Auth:Domain=https://auth.optionedge.in/oidc
      - Auth:Audience=https://api.optionedge.in
+     - ASPNETCORE_ENVIRONMENT=Production
      - RuntimeSettings__ProfileApiBaseUrl=https://api.optionedge.in/
      - RuntimeSettings__MessageQueueConnectionString=host=rabbitmq_local:5672;virtualhost=/;username=guest;password=guest;persistentMessages=false
      - RuntimeSettings__ConfigDatabaseConnectionString=optionedge_config.db
