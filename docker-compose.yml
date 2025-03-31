@@ -4,11 +4,12 @@ services:
     container_name: engine_local
     restart: always
     ports:
-     - "8080:8080"
+     - "7500:7500"
     environment:
      - TZ=Asia/Kolkata
      - Auth:Domain=https://auth.optionedge.in/oidc
      - Auth:Audience=https://api.optionedge.in
+     - RuntimeSettings__ProfileApiBaseUrl=https://api.optionedge.in\
      - RuntimeSettings__MessageQueueConnectionString=host=rabbitmq_local:5672;virtualhost=/;username=guest;password=guest;persistentMessages=false
      - RuntimeSettings__ConfigDatabaseConnectionString=optionedge_config.db
      - RuntimeSettings__DataFolder=/app/data
@@ -21,24 +22,6 @@ services:
     networks:
         - optionedge_local
   
-  ui_local:
-    image: 'optionedge/engine_ui:{{tag}}'
-    container_name: ui_local
-    restart: always
-    ports:
-     - "3000:3000"
-    environment:
-     - TZ=Asia/Kolkata
-     - NUXT_PUBLIC_API_BASE_URL=https://api.optionedge.in
-     - NUXT_PUBLIC_AUTH_ENDPOINT=https://auth.optionedge.in
-     - NUXT_PUBLIC_AUTH_APP_ID=b5qzcaxzeo0a2m7hih09m
-     - NUXT_PUBLIC_MY_OPTIONEDGE_BASE_URL=https://my.optionedge.in
-     - NUXT_PUBLIC_STREAMING_BASE_URL=http://localhost:8080
-    depends_on:
-      - engine_local
-    networks:
-        - optionedge_local
-
   rabbitmq_local:
     image: rabbitmq:4.0-management-alpine
     container_name: rabbitmq_local
