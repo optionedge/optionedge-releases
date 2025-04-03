@@ -1,4 +1,4 @@
-# OptionEdge  - Find your edge
+# OptionEdge  - Find your Edge
 
 [![Latest Release](https://img.shields.io/github/v/release/optionedge/optionedge-releases?style=for-the-badge)](https://github.com/optionedge/optionedge-releases/releases)
 
