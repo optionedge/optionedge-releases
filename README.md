@@ -132,7 +132,7 @@ OptionEdge is a **self-hosted** platform that can run on:
 
    - Use the following link to download the `docker-compose.yml` file:
 
-   - [![Docker Compose YAML](https://img.shields.io/badge/Download-Docker%20Compose-blue)](https://optionedgereleasessa.blob.core.windows.net/optionedge-github-releases/docker-compose.yml)
+   - [![Docker Compose YAML](https://img.shields.io/badge/Download-Docker%20Compose-blue)](https://store-api.optionedge.in/releases/docker-compose.yml)
 
    - Alternatively, download via terminal:
      ```bash
