@@ -15,6 +15,9 @@ services:
      - RuntimeSettings__DataFolder=/app/data
      - RuntimeSettings__UpgradeServiceUrl=http://upgrade_service:8080
      - RUNNING_IN_CONTAINER=true
+     - JwtSettings__Issuer=https://api.optionedge.in
+     - JwtSettings__Audience=https://api.optionedge.in
+     - JwtSettings__PublicKeyUrl=https://api.optionedge.in/auth/public-key
     depends_on:
       - rabbitmq_local
     volumes:
@@ -36,6 +39,13 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
         - optionedge_local
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
   
   rabbitmq_local:
     image: rabbitmq:4.0-management-alpine
