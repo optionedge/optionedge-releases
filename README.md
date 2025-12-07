@@ -2,15 +2,21 @@
 
 [![Latest Release](https://img.shields.io/github/v/release/optionedge/optionedge-releases?style=for-the-badge)](https://github.com/optionedge/optionedge-releases/releases)
 
-[![Windows Installer](https://img.shields.io/badge/Download-Windows%20Installer-blue)](https://store-api.optionedge.in/releases/OptionEdge_Installer_1.0.152.exe) 
-
 [![Docker Compose YAML](https://img.shields.io/badge/Download-Docker%20Compose-blue)](https://store-api.optionedge.in/releases/docker-compose.yml) 
+
+## UPDATES: DEC 2025
+
+OptionEdge is no longer accepting new sign-ups. Gradully we are retiring OptionEdge for exiting users by Feb 2026. Thanks for trying OptionEdge. 
 
 # [Click to view Quick Start Guide](#optionedge-quick-start-guide)
 
 ## Introduction
 
 **OptionEdge** is a self-hosted, web-based trading platform designed to help traders execute trades live quickly, manage positions efficiently, and optimize their strategies with advanced risk management capabilities. Whether you're a beginner or an experienced trader, OptionEdge provides a powerful toolkit to forward-test ideas, visualize payoffs, and adjust strategies without risking real capital or execute live with your favourite broker.
+
+## UPDATES: DEC 2025
+
+OptionEdge is no longer accepting new sign-ups. 
 
 ## 🚀 Key Features
 
@@ -45,43 +51,11 @@ OptionEdge is a **self-hosted** platform that can run on:
 
 # OptionEdge Quick Start Guide
 
-## Installation Steps
-
-### **Windows Installation**
-
-1. **Download the Installer:**
-
-   - Download the latest OptionEdge installer from the following link:
-   - [![Latest Release](https://img.shields.io/github/v/release/optionedge/optionedge-releases?style=for-the-badge)](https://github.com/optionedge/optionedge-releases/releases)
-
-2. **Run the Installer:**
-
-   - Locate the downloaded `.exe` file and double-click to run the installer.
-   - If you see the "Windows protected your PC" warning, follow these steps to proceed:
-     ![image](https://github.com/user-attachments/assets/27a36ed9-036d-4443-adf4-37c4585c947d)
-      - Click **More info**.
-      - Click Run anyway.
-      - If **More info**, options not available, right-click the installer, select Properties, and check Unblock under the General tab. Click Apply, then OK, and run the installer again.
-        - ![image](https://github.com/user-attachments/assets/af3e9083-82e2-4551-9171-39ecb9f05350)
-   - Follow the on-screen installation instructions.
-
-3. **Complete Installation:**
-
-   - Once the installation is completed, two shortcuts will be available on the desktop:
-     - **Start OptionEdge** – This starts the OptionEdge engine and launches the browser, which must be kept running.
-     
-4. **Accessing the UI:**
-
-   - Open Chrome (recommended) and navigate to [`http://localhost:7500`](http://localhost:7500).
-   - Log in with your credentials and follow the on-screen installation steps.
-
----
-
 ### **Linux/Mac Installation (Using Docker)**
 
 #### **Prerequisites: Install Docker**
 
-1. **Install Docker on Linux (Ubuntu):**
+**Install Docker on Linux (Ubuntu):**
 
    - Update package index:
      ```bash
@@ -107,15 +81,6 @@ OptionEdge is a **self-hosted** platform that can run on:
      sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
      ```
    - Verify installation:
-     ```bash
-     docker --version
-     ```
-
-2. **Install Docker on Mac:**
-
-   - Download and install Docker Desktop from [Docker’s official website](https://docs.docker.com/desktop/setup/install/mac-install/).
-   - Follow the installation instructions for macOS.
-   - Verify installation by running:
      ```bash
      docker --version
      ```
