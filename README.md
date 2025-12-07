@@ -4,19 +4,17 @@
 
 [![Docker Compose YAML](https://img.shields.io/badge/Download-Docker%20Compose-blue)](https://store-api.optionedge.in/releases/docker-compose.yml) 
 
-## UPDATES: DEC 2025
+## Updates: December 2025
+OptionEdge is no longer accepting new registrations.
+We will be gradually phasing out the platform for existing users by February 2026.
 
-OptionEdge is no longer accepting new sign-ups. Gradully we are retiring OptionEdge for exiting users by Feb 2026. Thanks for trying OptionEdge. 
+Thank you for being a part of our journey.
 
 # [Click to view Quick Start Guide](#optionedge-quick-start-guide)
 
 ## Introduction
 
 **OptionEdge** is a self-hosted, web-based trading platform designed to help traders execute trades live quickly, manage positions efficiently, and optimize their strategies with advanced risk management capabilities. Whether you're a beginner or an experienced trader, OptionEdge provides a powerful toolkit to forward-test ideas, visualize payoffs, and adjust strategies without risking real capital or execute live with your favourite broker.
-
-## UPDATES: DEC 2025
-
-OptionEdge is no longer accepting new sign-ups. 
 
 ## 🚀 Key Features
 
