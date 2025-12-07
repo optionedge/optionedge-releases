@@ -1,4 +1,5 @@
 services:
+
   engine_local:
     image: 'optionedge/engine:1.0.154'
     container_name: engine_local
@@ -15,9 +16,6 @@ services:
      - RuntimeSettings__DataFolder=/app/data
      - RuntimeSettings__UpgradeServiceUrl=http://upgrade_service:8080
      - RUNNING_IN_CONTAINER=true
-     - JwtSettings__Issuer=https://api.optionedge.in
-     - JwtSettings__Audience=https://api.optionedge.in
-     - JwtSettings__PublicKeyUrl=https://api.optionedge.in/auth/public-key
     depends_on:
       - rabbitmq_local
     volumes:
@@ -35,11 +33,10 @@ services:
      - TZ=Asia/Kolkata
      - ASPNETCORE_ENVIRONMENT=Production
     volumes:
-      - ./:/app/optionedge
-      - /var/run/docker.sock:/var/run/docker.sock
+       - ./:/app/optionedge
+       - /var/run/docker.sock:/var/run/docker.sock
     networks:
         - optionedge_local
-
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
       interval: 30s
@@ -57,5 +54,24 @@ services:
     networks:
         - optionedge_local
 
+  caddy:
+    image: caddy:2-alpine
+    container_name: caddy_proxy
+    restart: always
+    ports:
+      - "7500:7500"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - engine_local
+    networks:
+      - optionedge_local
+
+volumes:
+  caddy_data:
+  caddy_config:
+  
 networks:
   optionedge_local:
