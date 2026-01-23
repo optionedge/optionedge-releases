@@ -1,10 +1,10 @@
 {
-  "latestVersion": "1.0.179",
-  "releaseNotes": "Docker release for version 1.0.179",
-  "releaseDate": "2026-01-23T06:57:26Z",
+  "latestVersion": "1.0.180",
+  "releaseNotes": "Docker release for version 1.0.180",
+  "releaseDate": "2026-01-23T07:48:53Z",
   "minRequiredVersion": "1.0.50",
   "dockerImages": {
-    "engine": "optionedge/engine:1.0.179",
-    "upgradeService": "optionedge/upgrade-service:1.0.179"
+    "engine": "optionedge/engine:1.0.180",
+    "upgradeService": "optionedge/upgrade-service:1.0.180"
   }
 }
