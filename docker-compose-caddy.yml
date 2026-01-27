@@ -1,7 +1,7 @@
 services:
 
   engine_local:
-    image: 'optionedge/engine:1.0.187'
+    image: 'optionedge/engine:1.0.188'
     container_name: engine_local
     restart: always
     ports:
@@ -24,7 +24,7 @@ services:
         - optionedge_local
 
   upgrade_service:
-    image: 'optionedge/upgrade-service:1.0.187'
+    image: 'optionedge/upgrade-service:1.0.188'
     container_name: upgrade_service
     restart: always
     ports:
